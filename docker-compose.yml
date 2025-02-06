@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ollama-service:
+    build: .
+    container_name: ollama-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true
